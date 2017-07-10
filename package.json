@@ -1,6 +1,6 @@
 {
   "name": "projector-cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "bin": "bin.js",
   "repository": "git@github.com:projectorjs/projector-cli.git",
