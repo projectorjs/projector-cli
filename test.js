@@ -6,7 +6,7 @@ const path = require('path');
 const bin = path.join(__dirname, 'bin.js');
 
 function exec(command) {
-  return child.execSync(`${bin} ./fixture.js ${command}`).toString();
+  return child.execSync(`${bin} ./fixture.js ${command}`, { stdio: 'pipe' }).toString();
 }
 
 test('success', () => {

@@ -27,11 +27,6 @@ let task = input[1];
 projector(generator, task, flags).then(result => {
   console.log(JSON.stringify(result));
 }).catch(err => {
-  if (err instanceof projector.ChildError) {
-    console.error(err.stderr);
-    process.exit(err.code);
-  } else {
-    console.error(err.stack);
-    process.exit(1);
-  }
+  console.error(err);
+  process.exit(1);
 });
