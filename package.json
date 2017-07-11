@@ -2,7 +2,9 @@
   "name": "projector-cli",
   "version": "1.0.0",
   "description": "",
-  "bin": "bin.js",
+  "bin": {
+    "projector": "bin.js"
+  },
   "repository": "git@github.com:projectorjs/projector-cli.git",
   "author": "James Kyle <me@thejameskyle.com>",
   "license": "MIT",
