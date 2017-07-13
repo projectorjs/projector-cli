@@ -24,8 +24,8 @@ if (input.length !== 2) {
 let generator = resolveFrom(process.cwd(), input[0]);
 let task = input[1];
 
-projector(generator, task, flags).then(result => {
-  console.log(JSON.stringify(result));
+projector(generator, task, [flags]).then(result => {
+  if (result !== undefined) console.log(JSON.stringify(result));
 }).catch(err => {
   console.error(err);
   process.exit(1);

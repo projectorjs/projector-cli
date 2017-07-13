@@ -1,7 +1,7 @@
 {
   "name": "projector-cli",
   "version": "3.0.0",
-  "description": "",
+  "description": "Command-line tool for running Projector scripts",
   "bin": {
     "projector": "bin.js"
   },
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "meow": "^3.7.0",
-    "projector": "^2.0.0",
+    "projector": "^3.0.0",
     "resolve-from": "^3.0.0"
   }
 }

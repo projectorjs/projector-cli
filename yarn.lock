@@ -886,6 +886,10 @@ is-primitive@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-primitive/-/is-primitive-2.0.0.tgz#207bab91638499c07b2adf240a41a87210034575"
 
+is-promise@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
+
 is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
@@ -1608,11 +1612,12 @@ private@^0.1.6:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.7.tgz#68ce5e8a1ef0a23bb570cc28537b5332aba63ef1"
 
-projector@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/projector/-/projector-2.0.0.tgz#f9139cfc9682a2407d982d62dc38e1520a6f9b1a"
+projector@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/projector/-/projector-3.0.0.tgz#41582a16f4de91b22087900745d91944408f6ffa"
   dependencies:
     cross-spawn "^5.1.0"
+    is-promise "^2.1.0"
 
 prr@~0.0.0:
   version "0.0.0"
