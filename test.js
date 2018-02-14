@@ -5,8 +5,8 @@ const child = require('child_process');
 const path = require('path');
 const bin = path.join(__dirname, 'bin.js');
 
-function exec(command) {
-  return child.execSync(`${bin} ./fixture.js ${command}`, { stdio: 'pipe' }).toString();
+function exec(command, script = '') {
+  return child.execSync(`${bin} ${script} ${command}`, { stdio: 'pipe' }).toString();
 }
 
 test('success', () => {
@@ -19,4 +19,8 @@ test('failure', () => {
 
 test('unserializable', () => {
   expect(() => { exec('UNSERIALIZABLE'); }).toThrow('Converting circular structure to JSON');
+});
+
+test('custom projector file', () => {
+  expect(JSON.parse(exec('SUCCESS --foo 1', './projector-custom.js'))).toEqual({ opts: { foo: 1 } });
 });
