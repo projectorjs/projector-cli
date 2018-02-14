@@ -16,15 +16,18 @@ const cli = meow(`
 `);
 
 let {input, flags} = cli;
+let [projectorFile, projectorTask] = input;
 
-if (input.length !== 2) {
+if (input.length === 0) {
   cli.showHelp();
+} else if (input.length === 1) {
+  projectorTask = projectorFile;
+  projectorFile = './projector.js';
 }
 
-let generator = resolveFrom(process.cwd(), input[0]);
-let task = input[1];
+let generator = resolveFrom(process.cwd(), projectorFile);
 
-projector(generator, task, [flags]).then(result => {
+projector(generator, projectorTask, [flags]).then(result => {
   if (result !== undefined) console.log(JSON.stringify(result));
 }).catch(err => {
   console.error(err);
